@@ -23,7 +23,16 @@
     height: 100%;
     background-color: rgba(0,0,0,0.3);
   }
-  
+
+  .loading:not(:required) {
+    /* esconde o texto de carregamento...*/
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+
   .loading:not(:required):after {
     content: '';
     display: block;
