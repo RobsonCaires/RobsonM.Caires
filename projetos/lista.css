@@ -1,0 +1,100 @@
+*:{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    color-scheme: dark;
+  font-family: system-ui;
+  }
+  :root{
+    --clr-primary: #F5F5F5;
+  }
+  body{
+    min-height: 100svh;
+    display: grid;
+    place-content: center;
+    font-size: clamp(0.9rem, 2.5vw,1.4rem);
+    color: var(--clr-primary);
+    padding: 1rem;
+  }
+  h1{
+    font-size: clamp(1.2rem,2.5vw,2.2rem);
+    font-weight: 500;
+  }
+  code{
+    color: #38BDF8;
+    border: 1px solid hsl(from var(--clr-primary) h s 50% / 0.5);
+    padding-inline: .25rem;
+    border-radius: 5px;
+  }
+  form{
+    --_clr-hover: #F472B6;
+    --_clr-checked: #38BDF8;
+    
+    border: 1px solid hsl(from var(--clr-primary) h s 50% / 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  form > div{
+     --_clr-current: var( --clr-primary);
+  
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  form > div + div{
+    margin-block-start: .5rem;
+  }
+  label{
+    cursor:pointer;
+    color: var(--_clr-current);
+    transition: color 150ms ease-in-out;
+  }
+  
+  /* styled checkbox */
+  input[type='checkbox']{
+   
+   appearance: none; 
+    outline: none;
+   width: 1.5rem; 
+   height: 1.5rem; 
+   aspect-ratio: 1;
+   padding: .25rem;
+   background: transparent; 
+   border: 1px solid var(--_clr-current); 
+   border-radius: 2px;
+   display: grid;
+   place-content: center;
+   cursor: pointer;
+  }
+  input[type='checkbox']::after{
+      content: '\2714';
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+      color: var(--_clr-checked);
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  label:hover,
+  input[type='checkbox']:focus-visible,
+  input[type='checkbox']:focus-visible + label,
+  input[type='checkbox']:hover,
+  input[type='checkbox']:hover + label{
+    --_clr-current: var(--_clr-hover);
+  }
+  input[type='checkbox']:focus-visible::after,
+  input[type='checkbox']:hover::after{
+    opacity: .5;
+      color: var(--_clr-hover);
+  }
+  
+  
+  input[type='checkbox']:checked + label:not(:hover),
+  input[type='checkbox']:checked:not(:hover){
+     --_clr-current: var(--_clr-checked);
+  }
+  input[type='checkbox']:checked::after{
+      opacity: 1;
+  }
