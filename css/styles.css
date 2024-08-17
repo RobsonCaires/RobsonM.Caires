@@ -177,6 +177,10 @@ li a,
     background-color: var(--main-white);
 }
 
+button{
+    align-items: center;
+}
+
 button a{
     text-decoration: none;
     color: var(--main-red)
