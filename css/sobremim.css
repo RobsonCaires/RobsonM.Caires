@@ -1,0 +1,132 @@
+/* Importar fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be9831; /*gold*/
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+/* config gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* chamar fonte e fundo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+/* lista nao ordenada */
+
+header ul li a.active{
+    color: #181719;
+}
+
+ul {
+    list-style-type: none;
+    background-color: var(--main-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+li a:hover {
+    background-color: var(--main-blue);
+}
+
+li a,
+#meu_nome,
+#footer {
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* corpo */
+
+#meu_nome {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+
+#meu_nome h1 {
+    padding-top: 64px;
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+#meu_nome h2 {
+    font-size: 32px;
+    line-height: 80px;
+    font-weight: 200;
+    /* color: var(--main-red); */
+}
+
+/* footer */
+
+#footer {
+    background-color: var(--main-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 10px; */
+    padding: auto;
+}
+
+#footer h1 {
+    font-size: 52px;
+    font-weight: 800;
+}
+
+#footer h2 {
+    /* font-size: 24px; */
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: 200;
+    color: var(--main-white);
+}
+
+#footer hr {
+    border: 2px solid var(--main-red);
+    width: 100%;
+    margin: 30px;
+}
+
+#footer .footer-creditos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+#footer .footer-creditos a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
