@@ -16,6 +16,11 @@
 }
 
 /* chamar fonte e fundo */
+img {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
