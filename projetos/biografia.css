@@ -1,0 +1,231 @@
+/* Importar fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #4f6f68;
+    --main-blue: #5e837b;
+    --main-gray: #303841;
+}
+
+/* config gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* chamar fonte e fundo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+/* lista nao ordenada */
+
+/* header ul li a.active{
+    color: #181719;
+} */
+
+ul {
+    list-style-type: none;
+    background-color: var(--main-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+li a:hover {
+    background-color: var(--main-blue);
+}
+
+li a,
+#brasil,
+#footer {
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* corpo */
+
+#brasil {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#brasil h2 {
+    /* font-size: 32px; */
+    line-height: 80px;
+    font-weight: 200;
+    /* color: var(--main-red); */
+}
+#footer h3{
+    /* margin-top: -100px; */
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: 100;
+}
+
+/* blocos */
+#projetos {
+    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+#projetos h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    border-bottom: solid var(--main-white);
+    max-width: 800px;
+    margin: 48px auto;
+    color: var(--main-white);
+}
+
+#projetos .projetos-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#projetos .quadrados {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px,1fr 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 2% 5%;
+}
+
+#projetos .quadrados {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    text-align: center;
+}
+
+#projetos .quadrado:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#projetos .quadrado a{
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+#projetos .quadrado a:hover{
+    color: var(--main-red);
+}
+
+#projetos .quadrado img {
+    width: 100%;
+    height: 55vh;
+    display: block;
+}
+
+#projetos .container {
+    background: var(--main-gray);
+    font-size: 18px;
+    font-weight: 100;
+    padding: 18px;
+}
+
+#projetos .container {
+    color: var(--main-white);
+    text-decoration: none;
+}
+
+#projetos .projeto-1 button {
+    width: 250px;
+    height: 50px;
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    transition: 200ms;
+}
+
+#projetos .projeto-1 button:hover {
+    color: var(--main-gray);
+    background-color: var(--main-white);
+}
+
+button{
+    align-items: center;
+}
+
+button a{
+    text-decoration: none;
+    color: var(--main-red)
+}
+/* footer */
+
+#footer {
+    background-color: var(--main-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 125px;
+}
+
+#footer h1 {
+    font-size: 52px;
+    font-weight: 200;
+}
+
+#footer h2 {
+    font-size: 24px;
+    padding-bottom: 50px;
+    font-weight: 200;
+    color: var(--main-white);
+}
+
+#footer hr {
+    border: 2px solid var(--main-red);
+    width: 100%;
+    margin: 24px;
+}
+
+#footer .footer-creditos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+#footer .footer-creditos a {
+    text-decoration: none;
+    color: var(--main-white);
+    transition: 400ms;
+}
+
+#footer .footer-creditos a:hover{
+    color: var(--main-red)
+  }
